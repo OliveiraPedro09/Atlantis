@@ -76,6 +76,7 @@ function cadastroUsuario() {
             adicionarDependente = false;
         } else if (escolhadependente !== 1 && escolhadependente !== 2) {
             console.log("Opção inválida!");
+            return cadastroUsuario();
         }
     }
 
