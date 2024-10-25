@@ -2,6 +2,7 @@ import Processo from "../../abstracoes/processo";
 import { TipoDocumento } from "../../enumeracoes/TipoDocumento";
 import Cliente from "../../modelos/cliente";
 import Documento from "../../modelos/documento";
+import verificarDocumentoPassport from "../verificacao/verificarDocumentoPassport";
 
 export default class CadastroPassaporte extends Processo {
     private cliente: Cliente
@@ -14,6 +15,12 @@ export default class CadastroPassaporte extends Processo {
         let numero = this.entrada.receberTexto('Qual o número do documento?')
         let dataExpedicao = this.entrada.receberData('Qual a data de expedição do documento?')
         let passaporte = new Documento(numero, TipoDocumento.Passaporte, dataExpedicao)
+
+        if(verificarDocumentoPassport([this.cliente], numero)[0]){
+            console.log('Documento já foi cadastrado no site')
+            return
+        }
+
         this.cliente.Documentos.push(passaporte)
     }
 }
