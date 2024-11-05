@@ -9,8 +9,7 @@ export default class MenuTipoExcluir implements Menu {
         console.log(`| 1 - Cliente `)
         console.log(`| 2 - Dependente `)
         console.log(`| 3 - Documento `)
-        console.log(`| 4 - Endereço `)
-        console.log(`| 5 - Telefone `)
+        console.log(`| 4 - Telefone `)
         console.log(`| 0 - Finalizar ação`)
         console.log(`----------------------`)
     }

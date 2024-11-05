@@ -17,19 +17,44 @@ export default class Endereco implements Prototipo {
         this.codigoPostal = codigoPostal
     }
 
-    public get Rua() {return this.rua}
-    public get Bairro() {return this.bairro}
-    public get Cidade() {return this.cidade}
-    public get Estado() {return this.estado}
-    public get Pais() {return this.pais}
-    public get CodigoPostal() {return this.codigoPostal}
+    public get Rua() {
+        return this.rua
+    }
+    public get Bairro() {
+        return this.bairro
+    }
+    public get Cidade() {
+        return this.cidade
+    }
+    public get Estado() {
+        return this.estado
+    }
+    public get Pais() {
+        return this.pais
+    }
+    public get CodigoPostal() {
+        return this.codigoPostal
+    }
 
-    public set Rua(rua: string) {this.rua = rua}
-    public set Bairro(bairro: string) {this.bairro = bairro}
-    public set Cidade(cidade: string) {this.cidade = cidade}
-    public set Estado(estado: string) {this.estado = estado}
-    public set Pais(pais: string) {this.pais = pais}
-    public set CodigoPostal(codigoPostal: string) {this.codigoPostal = codigoPostal}
+    public setRua(novaRua: string){
+        this.rua = novaRua
+    }
+    public setBairro(novoBairro: string){
+        this.bairro = novoBairro
+    }
+    public setCidade(novaCidade: string){
+        this.cidade = novaCidade
+    }
+    public setEstado(novoEstado: string){
+        this.estado = novoEstado
+    }
+    public setPais(novoPais: string){
+        this.pais = novoPais
+    }
+    public setCodigoPostal(novoCodigoPostal: string){
+        this.codigoPostal = novoCodigoPostal
+    }
+    
 
     public clonar(): Prototipo {
         let endereco = new Endereco(this.rua, this.bairro, this.cidade, this.estado, this.pais, this.codigoPostal)

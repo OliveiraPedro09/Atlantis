@@ -1,8 +1,9 @@
+import verificarDoc from "../verificacao/verificarDoc";
 import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
 import { TipoDocumento } from "../../enumeracoes/TipoDocumento";
 import Cliente from "../../modelos/cliente";
 import Documento from "../../modelos/documento";
-import verificarDocumentoCPF from "../verificacao/verificarDocumentoCPF";
 
 export default class CadastroCpf extends Processo {
     private cliente: Cliente
@@ -12,15 +13,15 @@ export default class CadastroCpf extends Processo {
     }
 
     processar(): void {
+        let armazem = Armazem.InstanciaUnica
         let numero = this.entrada.receberTexto('Qual o número do documento?')
-        let dataExpedicao = this.entrada.receberData('Qual a data de expedição do documento?')
-        let cpf = new Documento(numero, TipoDocumento.CPF, dataExpedicao)
-
-        if(verificarDocumentoCPF([this.cliente], numero)[0]){
-            console.log('Documento já foi cadastrado no site')
+        let documentoExistente = verificarDoc(armazem.Clientes, numero)[0]
+        if(documentoExistente){
+            console.log('Documento já registrado')
             return
         }
-
+        let dataExpedicao = this.entrada.receberData('Qual a data de expedição do documento?')
+        let cpf = new Documento(numero, TipoDocumento.CPF, dataExpedicao)
         this.cliente.Documentos.push(cpf)
     }
 }
