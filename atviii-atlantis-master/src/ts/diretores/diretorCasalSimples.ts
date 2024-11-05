@@ -3,7 +3,7 @@ import { NomeAcomadacao } from "../enumeracoes/NomeAcomadacao";
 import Acomodacao from "../modelos/acomodacao";
 import Diretor from "../abstracoes/diretor";
 
-export default class DiretorSolteiroSimples extends Diretor<Acomodacao> {
+export default class DiretorCasalSimples extends Diretor<Acomodacao> {
 
     constructor() {
 
@@ -16,11 +16,11 @@ export default class DiretorSolteiroSimples extends Diretor<Acomodacao> {
 
         let objetoConstrutor = this.construtor as ConstrutorAcomodacao
 
-        objetoConstrutor.NomeAcomodacao = NomeAcomadacao.SolteiroSimples
-        objetoConstrutor.CamaCasal = 0
-        objetoConstrutor.CamaSolteiro = 1
+        objetoConstrutor.NomeAcomodacao = NomeAcomadacao.CasalSimples
+        objetoConstrutor.CamaCasal = 1
+        objetoConstrutor.CamaSolteiro = 0
         objetoConstrutor.Climatizacao = true
-        objetoConstrutor.Garagem = 0
+        objetoConstrutor.Garagem = 1
         objetoConstrutor.Suite = 1
 
         return objetoConstrutor.construir()
