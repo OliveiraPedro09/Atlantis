@@ -1,11 +1,12 @@
 import Processo from "../../abstracoes/processo";
+import Armazem from "../../dominio/armazem";
 import { TipoDocumento } from "../../enumeracoes/TipoDocumento";
 import Cliente from "../../modelos/cliente";
 import Documento from "../../modelos/documento";
-import Armazem from "../../dominio/armazem";
 import verificarDocumento from "../verificar/verificarDocumento";
 
-export default class CadastroRg extends Processo {
+
+export default class CadastroPassaporte extends Processo {
     private cliente: Cliente
     constructor(cliente: Cliente) {
         super()
@@ -14,7 +15,7 @@ export default class CadastroRg extends Processo {
 
     processar(): void {
         let armazem = Armazem.InstanciaUnica
-        let numDoc = this.entrada.receberTexto('Digite o número do RG: ')
+        let numDoc = this.entrada.receberTexto('Digite o número do Passaporte: ')
         let documentoencontrado = verificarDocumento(armazem.Clientes, numDoc)[0]
 
         if(documentoencontrado){
@@ -22,8 +23,9 @@ export default class CadastroRg extends Processo {
             return
         }
 
-        let dataemissao = this.entrada.receberData('Digite a data de emissão do RG: ')
-        let rg = new Documento(numDoc, TipoDocumento.RG, dataemissao)
-        this.cliente.Documentos.push(rg)
+        let dataemissao = this.entrada.receberData('Digite a data de emissão do Passaporte: ')
+        let passaporte = new Documento(numDoc, TipoDocumento.Passaporte, dataemissao)
+        this.cliente.Documentos.push(passaporte)
+
     }
 }

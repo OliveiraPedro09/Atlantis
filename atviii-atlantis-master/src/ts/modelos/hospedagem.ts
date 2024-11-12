@@ -2,6 +2,9 @@ import { NomeAcomadacao } from "../enumeracoes/NomeAcomadacao";
 import Cliente from "./cliente";
 
 export default class Hospedagem {
+    DataFinal(Hospedagem: Hospedagem[], Cliente: Cliente, DataInicio: Date, DataFinal: any) {
+        throw new Error("Method not implemented.");
+    }
     
     private acomodacao : NomeAcomadacao
     private cliente : Cliente
