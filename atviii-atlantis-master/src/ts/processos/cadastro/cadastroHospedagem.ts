@@ -22,7 +22,7 @@ export default class CadastroHospedagem extends Processo {
     processar(): void {
        console.log('Cadastro de Hospedagem');
 
-        let numeroDoc = this.entrada.receberTexto('Digite o numero do documento do cliente:').trim();
+        let numeroDoc = this.entrada.receberTexto('Digite o numero do documento do cliente:')
         let cliente = verificarCliente(this.armazem.Clientes, numeroDoc);
 
         if (!cliente) {
@@ -40,7 +40,6 @@ export default class CadastroHospedagem extends Processo {
         this.armazem.Acomodacoes.forEach((acomodacao, index) => {
             this.impressor = new ImpressorAcomodacao(acomodacao);
             console.log(`${index + 1}. ${this.impressor.imprimir()}`);
-           console.log('---------------------------------------------------');
         });
         
 
@@ -71,6 +70,7 @@ export default class CadastroHospedagem extends Processo {
         }
         
         const acomodacaoSelecionada = this.armazem.Acomodacoes[acomodacao - 1]; 
+        console.log('Quantidade Disponível:', acomodacaoSelecionada.QuantidadeDisponivel);
         if (Number(acomodacaoSelecionada.QuantidadeDisponivel) < 1) {
             console.log('Acomodação indisponível.');
             return;

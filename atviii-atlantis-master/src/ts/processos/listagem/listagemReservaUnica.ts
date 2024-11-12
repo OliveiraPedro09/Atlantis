@@ -28,7 +28,7 @@ export default class ListagemReservaUnica extends Processo{
         }
 
         let ClienteTitular = verificarTitular(cliente)
-        if(!ClienteTitular){
+        if(ClienteTitular){
             console.log("Cliente é titular.")
             return
         }
@@ -43,6 +43,7 @@ export default class ListagemReservaUnica extends Processo{
         }
 
         this.impressor = new ImpressorHospedagem(hospedagem)
+        console.log(this.impressor.imprimir())
         console.log("Listagem concluída.")
     }
 

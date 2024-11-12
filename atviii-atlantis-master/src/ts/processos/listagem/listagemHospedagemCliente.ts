@@ -3,6 +3,7 @@ import Armazem from "../../dominio/armazem";
 import ListagemHospedagem from "./listagemHospedagem";
 import Impressor from "../../interfaces/impressor";
 import verificarCliente from "../verificar/verificarCliente";
+import ListHosp from "../function/listHosp";
 
 
 export default class ListagemHospedagemCliente extends Processo{
@@ -32,7 +33,7 @@ export default class ListagemHospedagemCliente extends Processo{
             return
         }
 
-        ListagemHospedagem(hospedagem)
+        ListHosp(hospedagem)
         console.log("Listagem concluída.")
 
     }

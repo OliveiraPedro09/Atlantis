@@ -40,4 +40,23 @@ export default class Endereco implements Prototipo {
         let endereco = new Endereco(this.rua, this.bairro, this.cidade, this.estado, this.pais, this.codigoPostal)
         return endereco
     }
+
+    public setRua(rua: string): void {
+        this.rua = rua
+    }
+    public setBairro(bairro: string): void {
+        this.bairro = bairro
+    }
+    public setCidade(cidade: string): void {
+        this.cidade = cidade
+    }
+    public setEstado(estado: string): void {
+        this.estado = estado
+    }
+    public setPais(pais: string): void {
+        this.pais = pais
+    }
+    public setCodigoPostal(codigoPostal: string): void {
+        this.codigoPostal = codigoPostal
+    }
 }

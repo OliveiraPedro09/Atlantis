@@ -26,6 +26,7 @@ export default class ListagemClienteUnico extends Processo {
         }
 
         this.impressor = new ImpressaoCliente(cliente)
+        console.log(this.impressor.imprimir())
         console.log("Listagem concluída.")
     }
 }

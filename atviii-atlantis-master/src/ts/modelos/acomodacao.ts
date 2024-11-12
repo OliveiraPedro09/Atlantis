@@ -42,7 +42,7 @@ export default class Acomodacao {
         return this.quantidadeDisponivel
     }
 
-    public setQuantidadeDisponivel(quantidade: Number) {
-        this.quantidadeDisponivel = quantidade
+    public setQuantidadeDisponivel(novaQuantidade: Number) {
+        this.quantidadeDisponivel = novaQuantidade
     }
 }
