@@ -4,6 +4,9 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/entrada.js"
+    "start": "node js/index.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.9.3"
   }
 }
