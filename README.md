@@ -1,5 +1,6 @@
 # Atlantis
-Atividade Técnicas de Programação
+Bem-vindo ao Atlantis, o melhor sistema de gestão de clubes, hotéis e resorts do mundo!
+Atividade de Técnicas de Programação
 
 ## Visão Geral
 
