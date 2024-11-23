@@ -6,7 +6,7 @@ Atividade de Técnicas de Programação
 
 Este projeto é uma atividade de Técnicas de Programação que envolve o cadastro de clientes, documentos, endereços e telefones. O projeto é desenvolvido em TypeScript e utiliza Node.js para execução.
 
-## Como rodar a ATVI
+## Como rodar a ATVII
 
 ### Pré-requisitos
 
