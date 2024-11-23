@@ -10,14 +10,7 @@ const NavBar = () => {
     const getNavigationItems = () => {
         return [
             {label: "Dashboard", path: "/dashboard", icon: <FaTachometerAlt />},
-            {label: "Clientes", path: "/auditorias", icon: <FaClipboardList />}
-        ]
-    }
-
-    const getDropdownItems = () => {
-        return [
-            {label: "Novo Projeto", path: "/novoProjeto"},
-            {label: "Gerenciar Projetos", path: "/gerenciarProjetos"}
+            {label: "Clientes", path: "/clientes/novo", icon: <FaClipboardList />}
         ]
     }
 
