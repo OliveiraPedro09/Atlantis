@@ -16,7 +16,7 @@ Este projeto é uma atividade de Técnicas de Programação que envolve o cadast
 1. **Clone o repositório:**
 
    ```sh
-   git clone <URL_DO_REPOSITORIO>
+   git clone https://github.com/OliveiraPedro09/Atlantis.git
    
 
 2. **Navegue até o diretório do projeto `atvi-atlantis` no terminal:**
