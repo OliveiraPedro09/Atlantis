@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #007bff !important;
+    position: relative !important;
+}
+
+.logo {
+    width: 70px !important;
+    height: 70px !important; 
+}
+
+.nav-link {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.dropdown-toggle {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.dropdown-item {
+    color: black !important;
+}
+
+.dropdown-item:hover {
+    background-color: #007bff !important;
+    color: white !important;
+}

@@ -1,0 +1,38 @@
+.is-valid {
+    border-color: #28a745 !important;
+  }
+  
+  .is-invalid {
+    border-color: #dc3545 !important;
+  }
+
+  .select-wrapper {
+    position: relative;
+  }
+  
+  .select-wrapper select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2rem;
+  }
+  
+  .select-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .dependente-toggle {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .dependente-toggle:hover {
+    text-decoration: underline;
+  }

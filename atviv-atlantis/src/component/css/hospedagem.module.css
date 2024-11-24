@@ -1,0 +1,25 @@
+.is-valid {
+    border-color: #28a745 !important;
+  }
+  
+  .is-invalid {
+    border-color: #dc3545 !important;
+  }
+
+.select-wrapper {
+  position: relative;
+}
+
+.select-wrapper select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.select-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

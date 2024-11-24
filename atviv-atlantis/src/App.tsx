@@ -8,6 +8,7 @@ import HospedagemList from './component/hospedagem/HospedagemList';
 import Dashboard from './component/dashboard/Dashboard';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import HomePage from './pages/homePage';
+import "../src/component/css/app.module.css"
 
 function App() {
   return (
