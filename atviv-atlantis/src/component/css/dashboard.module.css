@@ -1,55 +1,79 @@
+/* src/component/css/dashboard.module.css */
 .dashboard-container {
-    background-color: #f4f4f4;
-    padding: 20px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.dashboard-card {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h2 {
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #007bff; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+}
+
+h4 {
+  color: #666666;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    padding: 10px;
   }
-  
+
   .dashboard-card {
-    background-color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    margin: 20px auto;
-    max-width: 1200px;
+    margin: 10px auto;
   }
-  
-  .text-center {
-    text-align: center;
-  }
-  
+
   h2 {
-    color: #333333;
-    font-weight: bold;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #007bff; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
+    font-size: 2rem;
   }
-  
+
   h4 {
-    color: #666666;
-    font-weight: bold;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
   }
-  
+
   .chart-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
+    height: 300px;
   }
-  
-  .recharts-tooltip-wrapper {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    padding: 5px;
   }
-  
-  .recharts-legend-wrapper {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+
+  h2 {
+    font-size: 1.5rem;
   }
+
+  h4 {
+    font-size: 1.2rem;
+  }
+
+  .chart-container {
+    height: 250px;
+  }
+}

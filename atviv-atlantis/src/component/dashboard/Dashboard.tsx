@@ -1,5 +1,6 @@
+/* src/component/dashboard/Dashboard.tsx */
 import React, { useEffect, useState } from 'react';
-import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Card, Row, Col, Container } from 'react-bootstrap';
 import "../css/dashboard.module.css";
 
@@ -60,29 +61,33 @@ const Dashboard = () => {
       <Card className="p-3 dashboard-card">
         <h2 className="text-center">Dashboard</h2>
         <Row>
-          <Col md={6} className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <h4>Hospedagens Vazias vs Preenchidas</h4>
             <div className="chart-container">
-              <PieChart width={900} height={500}>
-                <Pie data={dataPie} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={150} fill="#8884d8">
-                  {dataPie.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index === 0 ? '#0088FE' : '#00C49F'} />
-                  ))}
-                </Pie>
-                <Tooltip />
-              </PieChart>
+              <ResponsiveContainer width="100%" height={400}>
+                <PieChart>
+                  <Pie data={dataPie} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius="80%" fill="#8884d8">
+                    {dataPie.map((entry, index) => (
+                      <Cell key={`cell-${index}`} fill={index === 0 ? '#0088FE' : '#00C49F'} />
+                    ))}
+                  </Pie>
+                  <Tooltip />
+                </PieChart>
+              </ResponsiveContainer>
             </div>
           </Col>
-          <Col md={6} className="text-center">
+          <Col xs={12} md={6} className="text-center">
             <h4>Tipos de Hospedagens</h4>
             <div className="chart-container">
-              <BarChart width={800} height={500} data={dataBar}>
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Bar dataKey="value" fill="#8884d8" />
-              </BarChart>
+              <ResponsiveContainer width="100%" height={400}>
+                <BarChart data={dataBar} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Bar dataKey="value" fill="#8884d8" barSize={30} />
+                </BarChart>
+              </ResponsiveContainer>
             </div>
           </Col>
         </Row>
